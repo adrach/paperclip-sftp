@@ -27,8 +27,10 @@ module Paperclip
           @sftp_options[:host],
           @sftp_options[:user],
           password: @sftp_options[:password],
+          host_key: @sftp_options[:host_key] || "ssh-rsa",
           port: @sftp_options[:port],
-          keys: @sftp_options[:keys]
+          keys: @sftp_options[:keys],
+          verbose: @sftp_options[:verbose] || :warn
         )
       end
 
