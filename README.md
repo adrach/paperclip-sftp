@@ -34,7 +34,7 @@ end
 
 You can define these options globally, enable this storage for specific environments, etc. Please see [Paperclip](https://github.com/thoughtbot/paperclip) github page for more details.
 
-It is also possible to specify SSH key for passwordless connection.
+It is also possible to specify private SSH key for passwordless connection.
 
 
 ```ruby
@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
       host: "sftp.example.com",
       user: "user",
       port: 22,
-      keys: "/path/to/id_rsa.pub"
+      keys: "/path/to/id_rsa"
     }
 end
 ```
